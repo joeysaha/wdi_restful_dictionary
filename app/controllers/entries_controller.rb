@@ -10,4 +10,8 @@ class EntriesController < ApplicationController
   def new
     render :new
   end
+
+  def create
+    redirect_to entries_url
+  end
 end

@@ -1,1 +1,15 @@
 <h3>Welcome to the edit page</h3>
+<%= form_for @entry do |e| %>
+  <p>
+    <%= e.label :word %>
+    <%= e.text_field :word %>
+  </p>
+  <p>
+    <%= e.label :language %>
+    <%= e.text_field :language %>
+  </p><p>
+    <%= e.label :definition %>
+    <%= e.text_field :definition %>
+  </p>
+  <p><%= e.submit %></p>
+<% end %>

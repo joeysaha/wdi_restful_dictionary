@@ -1,1 +1,21 @@
-<h2>The new entry form will go here later!?!</h2>
+<h2>New Entry Form</h2>
+<%= form_for @entry do |new_entry| %>
+  <p>
+    <%= new_entry.label :word %>:
+    <%= new_entry.text_field :word %>
+  </p>
+
+  <p>
+    <%= new_entry.label :language %>:
+    <%= new_entry.text_field :language %>
+  </p>
+
+  <p>
+    <%= new_entry.label :definition %>:
+    <%= new_entry.text_area :definition, size: '30x10' %>
+  </p>
+
+  <p><%= new_entry.submit %></p>
+<% end %>
+
+<%= link_to "Entries Main", entries_url %>
